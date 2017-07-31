@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "统一登录";
+}
+
+<h2>登录验证</h2>
+<form method="post">
+    <input id="username" name="username" type="text" value="admin"/>
+    <input id="password" name="password" type="password" value="123"/>
+    <input type="submit" value="登录"/>
+    @Html.Hidden("ReturnUrl", (string) ViewBag.ReturnUrl)
+    @Html.Hidden("Token", (string) ViewBag.Token)
+</form>

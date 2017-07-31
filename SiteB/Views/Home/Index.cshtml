@@ -1,0 +1,8 @@
+﻿@using SSO.Core
+<h1>B网站</h1>
+@if(AuthernUtil.CurrentUser == null) {
+    @Html.Raw("未登录")
+} else {
+    @Html.Raw("用户Id" + AuthernUtil.CurrentUser.UserId + "<p/>")
+    @Html.Raw("用户名称" + AuthernUtil.CurrentUser.UserName)
+}
